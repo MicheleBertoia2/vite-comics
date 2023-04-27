@@ -40,18 +40,20 @@ export default {
     height: 81px;
       img{
         height: 55px;
-        margin: 10px 0 0 10px;
+        margin-left: 10px;
       }
       li{
         display: inline-block;
         height: 100%;
-        font-size: 10px;
+        font-size: 9px;
+        text-transform: uppercase;
+        font-weight: 700;
         margin: 0 10px;
         
         
         a{
           height: 100%;
-          color: $color-black;
+          color: $color-darkgray;
           border-bottom: 4px solid transparent;
           padding: 29px 0;
           &.active{

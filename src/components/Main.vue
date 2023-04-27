@@ -7,7 +7,7 @@ export default {
 
 <template>
   <section>
-    main
+    Content Goes here
   </section>
 </template>
 
@@ -18,7 +18,7 @@ export default {
   @use '../scss/mixin' as *;
 
   section{
-    min-height: 300px; 
+    min-height: 100px; 
     color: white;
     // debug
 

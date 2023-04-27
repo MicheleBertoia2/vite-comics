@@ -6,7 +6,7 @@ export default {
 </script>
 
 <template>
-  Footer
+  <footer>Footer</footer>
 </template>
 
 <style>
