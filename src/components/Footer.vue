@@ -1,7 +1,12 @@
 
 <script>
+import {footerMenus} from '../data/menus'
 export default {
-  
+  data(){
+    return{
+      footerMenus,
+    }
+  }
 }
 </script>
 
@@ -11,8 +16,10 @@ export default {
     <div class="f-top container">
 
       <div class="f-left">
-
-        <ul>
+        <ul v-for="(menu, index) in footerMenus" :key="index">
+          <li><a :href="menu.href"> {{ menu.title }}</a></li>
+        </ul>
+        <!-- <ul>
           <li><a href="#">dc comics</a></li>
           <li><a href="#">characters</a></li>
           <li><a href="#">comics</a></li>
@@ -50,8 +57,8 @@ export default {
           <li><a href="#">MAD magazine</a></li>          
           <li><a href="#">DC kids</a></li>          
           <li><a href="#">DC universe</a></li>          
-          <li><a href="#">dDC power visa</a></li>                    
-        </ul>
+          <li><a href="#">DC power visa</a></li>                    
+        </ul> -->
 
       </div>
 
