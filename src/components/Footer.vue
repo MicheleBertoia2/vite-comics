@@ -131,8 +131,33 @@ export default {
     }
 
     .f-social{
-      height: 100px;
+      height: 80px;
       background-color: $color-black;
+      .container{
+        height: 100%;
+        @include centerFlex(vertical);
+        justify-content: space-between;
+      }
+      button{
+        background-color: transparent;
+        color: $color-white;
+        text-transform: uppercase;
+        font-size: 10px;
+        font-weight: 700;
+        padding: 10px;
+        border-color: $color-blue;        
+        cursor: pointer;
+      }
+      .icons{
+        span{
+          color: $color-blue;
+        }
+        img{
+          width: 30px;
+          vertical-align: middle;
+          margin-left: 10px;
+        }
+      }
     }
     
   }
