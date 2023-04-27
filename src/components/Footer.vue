@@ -18,6 +18,7 @@ export default {
       <div class="f-left">
         <ul v-for="(menu, index) in footerMenus" :key="index">
           <li><a :href="menu.href"> {{ menu.title }}</a></li>
+          <li v-for="(link, index) in menu.links" :key="index"><a :href="link.href">{{ link.link }}</a></li>
         </ul>
         <!-- <ul>
           <li><a href="#">dc comics</a></li>
