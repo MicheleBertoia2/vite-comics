@@ -14,42 +14,43 @@ export default {
 
         <ul>
           <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>
-          <li><a href="#">dc comics</a></li>          
+          <li><a href="#">characters</a></li>
+          <li><a href="#">comics</a></li>
+          <li><a href="#">movies</a></li>
+          <li><a href="#">TV</a></li>
+          <li><a href="#">Games</a></li>
+          <li><a href="#">videos</a></li>
+          <li><a href="#">news</a></li>          
         </ul>
         
         <ul>
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>                    
+          <li><a href="#">shop</a></li>          
+          <li><a href="#">shop DC</a></li>          
+          <li><a href="#">shop DC collectibles</a></li>                    
         </ul>
         
         <ul>
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
+          <li><a href="#">DC</a></li>          
+          <li><a href="#">terms of use</a></li>          
+          <li><a href="#">privacy policy(new)</a></li>          
+          <li><a href="#">ad choices</a></li>          
+          <li><a href="#">advertising</a></li>          
+          <li><a href="#">jobs</a></li>          
+          <li><a href="#">subscriptions</a></li>          
+          <li><a href="#">talent workshop</a></li>          
+          <li><a href="#">CPSC certificates</a></li>          
+          <li><a href="#">ratings</a></li>          
+          <li><a href="#">shop help</a></li>          
+          <li><a href="#">contact us</a></li>          
         </ul>
         
         <ul>
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
-          <li><a href="#">dc comics</a></li>          
+          <li><a href="#">sites</a></li>          
+          <li><a href="#">DC</a></li>          
+          <li><a href="#">MAD magazine</a></li>          
+          <li><a href="#">DC kids</a></li>          
+          <li><a href="#">DC universe</a></li>          
+          <li><a href="#">dDC power visa</a></li>                    
         </ul>
 
       </div>
@@ -60,7 +61,22 @@ export default {
 
     </div>
 
-    <div class="f-social container"></div>
+    <div class="f-social">
+      <div class="container">
+
+        <button>sign up now!</button>
+
+        <div class="icons">
+          <span>FOLLOW US</span>
+          <img src="../assets/img/footer-facebook.png" alt="">
+          <img src="../assets/img/footer-twitter.png" alt="">
+          <img src="../assets/img/footer-youtube.png" alt="">
+          <img src="../assets/img/footer-pinterest.png" alt="">
+          <img src="../assets/img/footer-periscope.png" alt="">
+        </div>
+
+      </div>
+    </div>
 
   </footer>
 </template>
@@ -72,11 +88,11 @@ export default {
   @use '../scss/mixin' as *;
 
   footer{
-    height: 280px;
+    height: 360px;
     background-image: url('../assets/img/footer-bg.jpg');
-    overflow: hidden;
     .f-top{
-      height: 100%;
+      overflow: hidden;
+      height: calc(100% - 80px);
       display: flex;
       justify-content: space-between;
       .f-left{
@@ -93,12 +109,13 @@ export default {
                color: $color-white;
                text-transform: uppercase;      
                font-weight: 500;
-               font-size: 14px;      
+               font-size: 12px;      
              }
            }
            a {
              color: lighten($color-darkgray, 10%);
-             font-size: 9px;           
+             font-size: 8px;  
+             text-transform: capitalize;        
              }
           }
           
@@ -111,6 +128,11 @@ export default {
           transform: translateY(-10%);
         }
       }
+    }
+
+    .f-social{
+      height: 100px;
+      background-color: $color-black;
     }
     
   }
