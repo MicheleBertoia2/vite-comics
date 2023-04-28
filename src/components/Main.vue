@@ -1,7 +1,16 @@
 
 <script>
+import comics from "../data/dc-comics"
+import Card from "./partials/Card.vue"
 export default {
-  
+  components:{
+    Card
+  },
+  data(){
+    return{
+      comics,
+    }
+  }
 }
 </script>
 
@@ -22,40 +31,10 @@ export default {
 
         <div class="cards-container">
 
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
-
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
-
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
-
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
-
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
-
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
-
-          <div class="card">
-            <img src="https://www.panini.it/media/catalog/product/cache/a5b5dd3adfe0d321084804c738f29601/M/1/M1BLLA015ISBN_0.jpg" alt="American Vampire 1976">
-            <h4>american vampire 1976</h4>
-          </div>
+          <Card v-for="(comic, index) in comics" :key="index"
+            :imgTitle="comic.series"
+            :imgUrl="comic.thumb"
+          />
 
         </div>
 
@@ -108,22 +87,7 @@ export default {
         display: flex;
         flex-wrap: wrap;
         padding: 10px 0;
-        .card{
-          width: calc(100% / 6);
-          padding: 10px;
-          img{
-            width: 100%;
-            aspect-ratio: 1/1 ;
-
-          }
-          h4{
-            color: white;
-            text-transform: uppercase;
-            font-size: 10px;
-            padding: 10px
-            
-          }
-        }
+        
       }
 
       .load-more{
